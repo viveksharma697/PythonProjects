@@ -1,0 +1,2 @@
+a = "jaghf agbjfa agbed ajfgja"
+print(len(a))

@@ -3,7 +3,7 @@
 # Expected Output: "32,054.23"
 
 a = "32.054,23"
-b = a.b
+con = a.con
 a = a.translate(b(',.', '.,'))
 print(a)
 

@@ -1,5 +1,5 @@
 # print word "hellow" from the string "hellow world"
 
-a = "hellow world"
-print(a[0:6])
+a = "0123456789"
+print(a[0:5])
 # print(a[8])

@@ -1,4 +1,4 @@
-# Write a function to print all the fibonacci numbers
+# Write a function to print first n number of factorials
 
 def facto(n):
 

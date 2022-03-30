@@ -22,8 +22,8 @@ def fibo(n):
             b = c
             if c <= n:
                 print(c)
-n = input("Enter the value upto which you want to get the fibonacci no. : ")
-fibo(n)
+# n = input("Enter the value upto which you want to get the fibonacci no. : ")
+fibo(100)
 
 
 

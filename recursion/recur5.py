@@ -1,24 +1,18 @@
-# reverse the string
+# reverse the string using recursion
 
-import sys
-
-
-def reverse(string, firstpos=0, lastpos=sys.maxsize):
-    if firstpos < 0:
-        firstpos = 0
-    if lastpos >= len(string):
-        lastpos = len(string)-1
-    if lastpos <= len(string):
-        return string
+def reverse(s):
+    if len(s) == 0:
+        return s
     else:
-        newstring = string[:firstpos] + string[lastpos] + string[firstpos + 1:lastpos] + string[firstpos] + string[lastpos + 1:]
+        return reverse(s[1:]) + s[0]
+  
+s = "Geeksforgeeks"
+  
+print ("The original string  is : ",end="")
+print (s)
+  
+print ("The reversed string(using recursion) is : ",end="")
+print (reverse(s))
 
-        return reverse(newstring, firstpos+1, lastpos-1)
 
 
-stringList = ['desktop',
-              'laptop', 'palmtop',
-              'this string is written to be reversed']
-
-for i in range(len(stringList)):
-    print('Reverse of', stringList[i], 'is:', reverse(stringList[i]))

@@ -1,5 +1,5 @@
 # Sudoku Solver
-
+from pprint import pprint
 def find_next_empty(puzzle):
 
     for r in range(9):
@@ -51,25 +51,25 @@ def solve_sudoku(puzzle):
 
         puzzle[row][col] = -1
 
-    # if none of the numbers that we try word, then this puzzle is UNSOLVED
+    # if none of the numbers that we try word, then this puzzle is UNSOLVABLE
     return False
 
 if __name__ == '__main__':
     example_board = [
-        [3, 9,-1,   -1, 5, -1,   -1,-1, -1],
+        [3, 9,-1,   -1, 5, -1,   -1, -1, -1],
         [-1, -1, -1,   2, -1, -1,   -1, -1, 5],
         [-1, -1, -1,   7, 1, 9,   -1, 8, -1],
 
 
-        [-1, 5,-1,   -1, 6, 8,   -1,-1, -1],
+        [-1, 5,-1,   -1, 6, 8,   -1, -1, -1],
         [2, -1, 6,   -1, -1, 3,   -1, -1, -1],
-        [-1, -1, -1,   -1, -1, -1,   -1, 8, -1],
+        [-1, -1, -1,   -1, -1, -1,   -1, -1, 4],
 
-        [5, -1, -1,   -1, -1, -1,   -1,-1, -1],
+        [5, -1, -1,   -1, -1, -1,   -1, -1, -1],
         [6, 7, -1,   1, -1, 5,   -1, 4, -1],
         [1, -1, 9,   -1, -1, -1,   2, -1, -1], 
     ]
 
     print(solve_sudoku(example_board))
-    print(example_board)
+    pprint(example_board)
 
